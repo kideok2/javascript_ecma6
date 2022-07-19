@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function.html</title>
+</head>
+<body>
+    <script>
+    // 전달 되는 값이 없으면 기본값(default값)으로 지정가능
+    // 함수에 선언된 매개변수의 기본값(default)을 지정할 수 있다.
+        function showInfo(num=0, name="누구야", addr="어디야"){
+            console.log(num+" | "+name+" | "+ addr);
+        }
+
+        showInfo(1, "김기덕", "남양주");
+        showInfo();
+
+        function useFunc(...args){
+            console.log(args); //...args = 빈배열 []
+        }
+        // 빈값을 써놓으면 빈배열값이 들어간다.
+        useFunc();
+        useFunc(10);
+        useFunc(10, 20, 30);
+        useFunc(10, "kim", true);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            transition: all 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">div1</div>
+    <div class="box">div2</div>
+    <div class="box">div3</div>
+    <div class="box">div4</div>
+    <div class="box">div5</div>
+    <div class="box">div6</div>
+    <script>
+        const boxArr = document.querySelectorAll('.box');
+
+        boxArr.forEach((box) => {
+            box.addEventListener('click', function(e) {
+                console.log(this);
+                console.log(e);
+                if(e.timeStamp > 3000) {
+                    this.style.width = '200px';
+                    this.style.height = '200px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
