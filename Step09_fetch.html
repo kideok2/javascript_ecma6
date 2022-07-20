@@ -20,6 +20,7 @@
             fetch("friends.json")
             .then(function(response){
                 //console.log(response);
+                //return response.text(); json 이외엔 다 text?
                 return response.json();
             }).then(function(data){
                 //data 는 친구 목록이 들어 있는 array 이다.
@@ -31,6 +32,34 @@
                 }
             });
         });
+
+        let str1=`
+            {"num":1, "name":"김구라", "isMan":true}
+        `;
+        /*
+        json 형식으로 작성
+        let myf={"name":"김기덕","living":"남양주시","fFood":["치킨","타르트","파스타","햄버거"]}
+        
+        xml 형식으로 작성
+        <info>
+            <name>김기덕</name>
+            <living>남양주시</living>
+            <food>
+                <fFood>치킨</fFood>
+                <fFood>타르트</fFood>
+                <fFood>파스타</fFood>
+                <fFood>햄버거</fFood>
+            </food>
+        </info> 
+        */
+
+        let obj1={num:1, name:"김기덕", isMan:true};
+        let obj2=JSON.parse(str1);
+
+        let str2=`
+            ["김구라","해골","원숭이"]
+        `;
+        let arr2=JSON.parse(str2);
     </script>
 </body>
 </html>

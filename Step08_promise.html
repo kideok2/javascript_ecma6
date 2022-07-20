@@ -11,11 +11,10 @@
         //메뉴를 주문하는 함수라고 가정
         function order(menu, callback){
             //메뉴를 준비하는데 걸리는 시간이 랜덤하다고 가정하자
-            const delay=Math.random()*5000+5000; // 5000~10000 사이의 랜덤한 숫자
-                        // 0~1
+            const delay=Math.random()*5000+5000; // 5000~10000(5-10) 사이의 랜덤한 숫자
             setTimeout(function(){
                 console.log(menu+ "가 준비 되었습니다.");
-                callback(menu);
+                callback(menu); //다시 order(menu, callback)을 부른다
             }, delay); //랜덤한 시간 이후에 호출됨 - 비동기 동작
         }
 
@@ -45,9 +44,9 @@
         });*/
 
         // 이 값은 랜덤하게 출력됨
-        order("커피", function(item){});
-        order("샌드위치", function(item){});       
-        order("아이스크림", function(item){});
+        //order("커피", function(item){});
+        //order("샌드위치", function(item){});       
+        //order("아이스크림", function(item){});
         
         
 

@@ -26,9 +26,7 @@
 
         // 인자로 전달된 함수를 10초 이후에 호출해주는 함수
         function wait(callback){
-            setTimeout(function(){
-                callback();
-            }, 10000);
+            setTimeout(function(){callback();}, 10000);
         }
 
         wait(function(){
